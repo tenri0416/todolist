@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import {useState} from "react";
+import Inputtext from "./components/Inputtext";
+import uuid from "react-uuid";
+import List from "./components/List";
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [todos,setTodos]=useState([]);
+
+  const addOnClick=(value)=>{
+    setTodos([
+      ...todos,
+      {
+        content:value,
+        id:uuid()
+      }
+    ]);
+    console.log(todos)
+    
+  }
+
+  //削除ボタン
+  const deleteOnClick=(id)=>{
+    const newTodos=(todos.filter(todo => todo.id !== id))
+    setTodos(newTodos);
+    console.log(id);
+  }
+  
+  return(
+      
+    <div className="col-md-3 center">
+     <div className="App">
+    <h1>Todoリスト</h1>
+    <Inputtext addOnClick={addOnClick}deleteOnClick={deleteOnClick}/>
+    <List todos={todos}deleteOnClick={deleteOnClick}/>
     </div>
-  );
+  </div>
+
+  ) 
 }
 
 export default App;

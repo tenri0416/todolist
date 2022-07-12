@@ -1,6 +1,8 @@
 .App {
   text-align: center;
+  
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +38,14 @@
     transform: rotate(360deg);
   }
 }
+.d-flex {
+  display: flex !important;
+  height: 100vh;
+}
+
+
+  .center {
+      margin: 0 auto;
+      align-self: center;
+    }
+
