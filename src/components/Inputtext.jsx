@@ -21,11 +21,8 @@ const Inputtext = ({addOnClick}) => {
         setValue(e.target.value);
       }}/>
       <Button className="btn btn-primary"variant="primary"type="submit">追加</Button>{' '}
-      
-      
     </Form.Group>
     </form>
-    
   </div>
 </div>
  
