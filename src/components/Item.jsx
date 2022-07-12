@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { List,Form, ListGroup, Button } from 'react-bootstrap'
+import { Form, ListGroup, Button } from 'react-bootstrap'
 
 
 const Item = ({content,id,deleteOnClick}) => {

@@ -10,6 +10,7 @@ const List = ({todos,deleteOnClick}) => {
     <ListGroup>
       {
         todos.map((todo)=>{
+          //map関数は必ずkeyが必要 
           return(
            
           <Item key={todo.id} id={todo.id} content={todo.content}deleteOnClick={deleteOnClick}/>

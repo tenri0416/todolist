@@ -38,6 +38,7 @@
     transform: rotate(360deg);
   }
 }
+/* 下の二つは追加 */
 .d-flex {
   display: flex !important;
   height: 100vh;

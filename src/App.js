@@ -28,7 +28,7 @@ function App() {
   }
   
   return(
-      
+      //中央よりにするためにcol-md-3 centerで指定
     <div className="col-md-3 center">
      <div className="App">
     <h1>Todoリスト</h1>
